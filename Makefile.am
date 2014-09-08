@@ -78,7 +78,7 @@ liblldp_clif_la_SOURCES = clif.c
 
 vdptool_SOURCES = vdptool.c lldp_util.c qbg/vdp22_clif.c
 vdptool_LDADD = ${srcdir}/liblldp_clif.la
-vdptool_LDFLAGS = -llldp_clif
+vdptool_LDFLAGS = -llldp_clif $(LIBNL_LIBS)
 
 dcbtool_SOURCES = dcbtool.c dcbtool_cmds.c parse_cli.l \
 weak_readline.c $(lldpad_include_HEADERS) $(noinst_HEADERS)
